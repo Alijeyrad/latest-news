@@ -1,0 +1,26 @@
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Times New Roman", sans-serif;
+}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.fa-long-arrow-up {
+  font-size: 1.3rem;
+}
+
+.arrow {
+  padding: 15px 0 !important;
+}
