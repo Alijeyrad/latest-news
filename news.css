@@ -17,10 +17,58 @@ html,body,h1,h2,h3,h4,h5,h6 {
   align-items: baseline;
 }
 
+footer {
+  margin-top: 64px;
+}
+
 .fa-long-arrow-up {
   font-size: 1.3rem;
 }
 
-.arrow {
+#arrow {
   padding: 15px 0 !important;
+  opacity: 0.95;
+}
+
+#arrow:hover {
+  opacity: 1;
+}
+
+label {
+  display: block;
+}
+
+.date {
+  padding: 5.5px;
+}
+
+.myMargin {
+  margin: 3px 0;
+}
+
+.myMargin1 {
+  margin-top: 10px;
+}
+
+.w3-padding-64-top {
+  padding-top: 64px!important;
+}
+
+
+hr {
+  width: 60%;
+}
+
+.w3-display-middle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.post {
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
 }

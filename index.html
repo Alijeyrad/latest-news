@@ -17,13 +17,9 @@
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <span class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <span class="w3-bar-item w3-button w3-theme-l1">Latest News</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hover-white" id="about">About</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</span>
-    <span class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</span>
+    <span class="w3-bar-item w3-button w3-theme-l1">Headlines</span>
+    <span class="w3-bar-item w3-button w3-hover-white" id="about">About</span>
+    <span class="w3-bar-item w3-button w3-hover-white">Refresh</span>
   </div>
 </div>
 
@@ -32,11 +28,45 @@
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Link</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Link</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Link</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Link</span>
+  
+  <!-- Categories -->
+  <h4 class="w3-bar-item"><b>Category</b></h4>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">General News</span>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">Health</span>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">Entertainment</span>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">Sports</span>
+  
+  <!-- Country -->
+  <h4 class="w3-bar-item"><b>Country</b></h4>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">USA</span>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">Australia</span>
+  <span class="w3-bar-item w3-button w3-hover-black" href="#">Venezuela</span>
+  
+  <!-- Search -->
+  <h4 class="w3-bar-item"><b>Looking for more?</b></h4>
+  <form class="w3-container w3-bar-item">
+
+    <input class="w3-input w3-border w3-round myMargin" type="text" placeholder="Titles, description...">
+
+    <select class="w3-select w3-border w3-round myMargin" name="option">
+      <option value="" disabled selected>Language</option>
+      <option value="1">English</option>
+      <option value="2">Spanish</option>
+    </select>
+
+    <select class="w3-select w3-border w3-round myMargin" name="option">
+      <option value="" disabled selected>Sort By</option>
+      <option value="1">Related</option>
+      <option value="2">Time Published</option>
+    </select>
+
+    <label for="dateFrom">From:</label>
+    <input name="dateFrom" class="w3-border w3-round w3-block date" type="date"></input>
+    <label for="dateTo">To:</label>
+    <input name="dateTo" class="w3-border w3-round w3-block date" type="date"></input>
+
+    <button class="w3-btn w3-black w3-round w3-medium w3-block myMargin1">Search</button>
+  </form>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -45,95 +75,60 @@
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:250px">
 
-  <div class="w3-row w3-padding-64">
+  <!-- First Post -->
+  <div class="w3-row w3-padding-64-top">
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Heading</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+  </div>
+  <!-- Break Line -->
+  <div class="w3-display-container">
+    <div class="w3-display-middle">
+      <hr>
     </div>
   </div>
 
-  <div class="w3-row">
+  <!-- Other Posts -->
+  <div class="w3-row post">
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div>
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Heading</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+  </div>
+  <!-- Break Line -->
+  <div class="w3-display-container">
+    <div class="w3-display-middle">
+      <hr>
     </div>
   </div>
 
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a class="w3-button w3-black" href="#">1</a>
-      <a class="w3-button w3-hover-black" href="#">2</a>
-      <a class="w3-button w3-hover-black" href="#">3</a>
-      <a class="w3-button w3-hover-black" href="#">4</a>
-      <a class="w3-button w3-hover-black" href="#">5</a>
-      <a class="w3-button w3-hover-black" href="#">»</a>
-    </div>
-  </div>
 
   <footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-32 footerContainer arrow">
+    <!-- scroll to top arrow -->
+    <div class="w3-container w3-theme-l1 w3-padding-32 footerContainer" id="arrow">
       <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-
     </div>
+    <!-- links -->
     <div class="w3-container w3-theme-l2 w3-padding-32 footerContainer">
-      <h4>Footer</h4>
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      <p>API: <a href="https://newsapi.org/" target="_blank">NewsAPI</a></p>
     </div>
-
-    <div class="w3-container w3-theme-l1">
-    </div>
+    
   </footer>
 
 <!-- END MAIN -->
 </div>
-<!-- W3 script -->
-<script>
-  // Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
-</script>
 <!-- My JS -->
 <script src="./news.js"></script>
 </body>
