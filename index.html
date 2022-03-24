@@ -11,7 +11,7 @@
 <!-- My Styles -->
 <link rel="stylesheet" href="./news.css">
 </head>
-<body>
+<body onload="startApp('general', 'us')">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -19,7 +19,7 @@
     <span class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <span class="w3-bar-item w3-button w3-theme-l1">Headlines</span>
     <span class="w3-bar-item w3-button w3-hover-white" id="about">About</span>
-    <span class="w3-bar-item w3-button w3-hover-white">Refresh</span>
+    <span onclick="startApp('general', 'us')" class="w3-bar-item w3-button w3-hover-white">Refresh</span>
   </div>
 </div>
 
@@ -31,41 +31,42 @@
   
   <!-- Categories -->
   <h4 class="w3-bar-item"><b>Category</b></h4>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">General News</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Health</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Entertainment</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Sports</span>
+  <span onclick="startApp('general', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">General News</span>
+  <span onclick="startApp('health', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">Health</span>
+  <span onclick="startApp('entertainment', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">Entertainment</span>
+  <span onclick="startApp('sports', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">Sports</span>
+  <span onclick="startApp('technology', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">Technology</span>
   
   <!-- Country -->
-  <h4 class="w3-bar-item"><b>Country</b></h4>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">USA</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Australia</span>
-  <span class="w3-bar-item w3-button w3-hover-black" href="#">Venezuela</span>
+  <h4 class="w3-bar-item"><b>Top Headlines</b></h4>
+  <span onclick="startApp('general', 'us')" class="w3-bar-item w3-button w3-hover-black" href="#">USA</span>
+  <span onclick="startApp('general', 'au')" class="w3-bar-item w3-button w3-hover-black" href="#">Australia</span>
+  <span onclick="startApp('general', 've')" class="w3-bar-item w3-button w3-hover-black" href="#">Venezuela</span>
   
   <!-- Search -->
   <h4 class="w3-bar-item"><b>Looking for more?</b></h4>
-  <form class="w3-container w3-bar-item">
 
+  <form class="w3-container w3-bar-item" onsubmit="searchNews(event)">
     <input class="w3-input w3-border w3-round myMargin" type="text" placeholder="Titles, description...">
 
     <select class="w3-select w3-border w3-round myMargin" name="option">
-      <option value="" disabled selected>Language</option>
+      <option value="0" disabled selected>Language</option>
       <option value="1">English</option>
       <option value="2">Spanish</option>
     </select>
 
     <select class="w3-select w3-border w3-round myMargin" name="option">
-      <option value="" disabled selected>Sort By</option>
+      <option value="0" disabled selected>Sort By</option>
       <option value="1">Related</option>
       <option value="2">Time Published</option>
     </select>
 
-    <label for="dateFrom">From:</label>
-    <input name="dateFrom" class="w3-border w3-round w3-block date" type="date"></input>
-    <label for="dateTo">To:</label>
-    <input name="dateTo" class="w3-border w3-round w3-block date" type="date"></input>
+    <label>From:</label>
+    <input class="w3-border w3-round w3-block date" type="date"></input>
+    <label>To:</label>
+    <input class="w3-border w3-round w3-block date" type="date"></input>
 
-    <button class="w3-btn w3-black w3-round w3-medium w3-block myMargin1">Search</button>
+    <button type="submit" class="w3-btn w3-black w3-round w3-medium w3-block myMargin1">Search</button>
   </form>
 </nav>
 
@@ -74,44 +75,14 @@
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:250px">
-
+  <!-- where we update the news -->
+<div id="newsSection">
   <!-- First Post -->
-  <div class="w3-row w3-padding-64-top">
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <!-- Break Line -->
-  <div class="w3-display-container">
-    <div class="w3-display-middle">
-      <hr>
-    </div>
-  </div>
 
-  <!-- Other Posts -->
-  <div class="w3-row post">
-    <div class="w3-third w3-container">
-      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <!-- Break Line -->
-  <div class="w3-display-container">
-    <div class="w3-display-middle">
-      <hr>
-    </div>
-  </div>
+</div>
 
 
+<!-- Footer -->
   <footer id="myFooter">
     <!-- scroll to top arrow -->
     <div class="w3-container w3-theme-l1 w3-padding-32 footerContainer" id="arrow">
@@ -120,11 +91,10 @@
     <!-- links -->
     <div class="w3-container w3-theme-l2 w3-padding-32 footerContainer">
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-      <p>API: <a href="https://newsapi.org/" target="_blank">NewsAPI</a></p>
+      <p>API provider: <a href="https://newsapi.org/" target="_blank">NewsAPI</a></p>
     </div>
     
   </footer>
-
 <!-- END MAIN -->
 </div>
 

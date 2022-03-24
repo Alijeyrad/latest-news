@@ -28,6 +28,7 @@ footer {
 #arrow {
   padding: 15px 0 !important;
   opacity: 0.95;
+  cursor: pointer;
 }
 
 #arrow:hover {
@@ -69,6 +70,19 @@ hr {
   margin-top: 30px;
 }
 
-a {
-  text-decoration: none;
+
+img {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.moreButton {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#moreButton {
+  align-items: flex-end;
+  display: flex;
 }
